@@ -20,8 +20,11 @@ import java.util.List;
 
 public class UseFans {
 
-    // How many fans will we add to the collection?
-    private static final int numFans = 6;
+    // Constants
+    private static final int NUM_FANS = 6;
+    private static final int[] FAN_SPEED = {Fan.STOPPED, Fan.SLOW, Fan.MEDIUM, Fan.FAST};
+    private static final String[] COLORS = {"green", "blue"};
+    private static final int NEW_RADIUS = 10;
 
     public static void main(String[] args) {
 
@@ -29,11 +32,12 @@ public class UseFans {
         List<Fan> fans = new ArrayList<>();
 
         // Add fans to the fans collection
-        for (int i = 0; i < numFans; i++) {
+        for (int i = 0; i < NUM_FANS; i++) {
             fans.add(new Fan());
         }
 
         // display the list of fans
+        System.out.println("Fans after creation with default values.");
         displayFans(fans);
 
         // FAN MANIPULATION BEGINS
@@ -45,18 +49,23 @@ public class UseFans {
 
         // set the fan speed progressively increasing then restarting
         for (int i = 0; i < fans.size(); i++) {
-            // % 4 keeps the speed between 0-3
-            fans.get(i).setSpeed(i % 4);
+            // [i % FAN_SPEED.length] keeps the speed between all valid speed variables
+            fans.get(i).setSpeed(FAN_SPEED[i % FAN_SPEED.length]);
         }
 
-        // set the first half of the fans to Green
+        // set the first half of the fans to COLORS[0]
         for (int i = 0; i < (fans.size() / 2); i++) {
-            fans.get(i).setColor("green");
+            fans.get(i).setColor(COLORS[0]);
         }
 
-        // set every odd index fan radius to 10
+        // set the second half of the fans to COLORS[1]
+        for (int i = fans.size() / 2; i < fans.size(); i++) {
+            fans.get(i).setColor(COLORS[1]);
+        }
+
+        // set every odd index fan radius to NEW_RADIUS
         for (int i = 1; i < fans.size(); i += 2) {
-            fans.get(i).setRadius(10);
+            fans.get(i).setRadius(NEW_RADIUS);
         }
 
         // FAN MANIPULATION ENDS
