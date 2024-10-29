@@ -80,6 +80,6 @@ public class Tv {
 
     // String output
     public String toString() {
-        return String.format("Channel: " + channel + "%nVolume: " + volume + "%nOn: " + on);
-     }
+        return String.format("{channel: " + channel + ", volume: " + volume + ", on: " + on + "}");
+    }
 }

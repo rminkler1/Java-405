@@ -1,8 +1,8 @@
 public class Test {
-    String catName;
-    String color;
-    boolean isHungry;
-    boolean wantsAttention;
-    boolean isReadyToHunt;
-    final boolean isCrazy = true;
+    static class Plant {
+    }
+
+    public static void main(String[] args) {
+
+    }
 }

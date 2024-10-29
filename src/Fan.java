@@ -1,10 +1,10 @@
 /*
 Robert Minkler
-Oct 26, 2024
-CSD 405 Module 1 Assignment
+Oct 29, 2024
+CSD 405 Module 2 Assignment
 
-Create a Fan class and demonstrate it in use.
-This is the Fan class
+Use UseFans.displayFan where possible in Fan class
+replaced toString method with output from displayFan
  */
 
 public class Fan {
@@ -98,8 +98,9 @@ public class Fan {
     }
 
     // Show status using toString
+    // Use displayFan method in UseFan Class for output
     public String toString() {
-        return "Fan: {on: " + getOn() + ", speed: " + getSpeedStr() + ", radius: " + getRadius() + ", color: " + getColor() + "}";
+        return UseFans.displayFan(this);
     }
 
     // additional functionality not required in the spec.
