@@ -26,7 +26,7 @@ public class UseFans {
     public static void main(String[] args) {
 
         // Create a collection of Fan instances
-        List<Fan> fans = new ArrayList<Fan>();
+        List<Fan> fans = new ArrayList<>();
 
         // Add fans to the fans collection
         for (int i = 0; i < numFans; i++) {
