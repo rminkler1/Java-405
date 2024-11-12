@@ -34,9 +34,8 @@ public class MinklerMod4 {
         // Run additional tests
         RobertArrayListTest.tests();
     }
-
-
 }
+
 
 class RobertArrayListTest {
 

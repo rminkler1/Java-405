@@ -17,7 +17,7 @@ public class TvCollection {
 
         // Lists are a dynamically sized collection and can be added to after creation
         // Create a new tvList collection
-        List<Tv> tvList = new ArrayList<Tv>();
+        List<Tv> tvList = new ArrayList<>();
 
         // Add four TVs to the list
         for (int i = 0; i < 4; i++) {
